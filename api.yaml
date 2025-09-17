@@ -1,0 +1,27 @@
+openapi: 3.1.0
+info:
+  title: API de gestión de libros
+  description: API para gestionar libros en una biblioteca.
+  version: 1.0.0
+
+
+paths:
+  /books:
+    get:
+      summary: Obtener todos los libros
+      responses:
+        '200':
+          description: Lista de libros
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id: { type: integer, example: 1 }
+                    title: { type: string, example: "El principito" }
+                    author: { type: string, example: "J.R.R. Tolkien" }
+                    editorial: { type: string, example: "Minotauro" }
+
+                      
